@@ -1,0 +1,45 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://ivyedition.com/sitemap.xml
+
+# Crawl-delay (optional, be polite)
+Crawl-delay: 1
+
+# Disallow admin routes
+Disallow: /admin
+Disallow: /admin/
+
+# Allow social/search bots specifically
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# AI/LLM crawlers - allow access to llm.html
+User-agent: GPTBot
+Allow: /llm.html
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /llm.html
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /llm.html
+Allow: /
+
+User-agent: Claude-Web
+Allow: /llm.html
+Allow: /

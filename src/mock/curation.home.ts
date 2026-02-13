@@ -1,0 +1,578 @@
+/**
+ * Homepage Curation Mock Data
+ * 
+ * This dataset drives the homepage layout (A5).
+ * Will be replaced with CMS data when wired up.
+ */
+
+import type { HomepageCuration } from './types';
+
+// Placeholder image dimensions for CLS compliance
+const HERO_16_9 = { width: 1920, height: 1080 };
+const CARD_4_3 = { width: 800, height: 600 };
+const CARD_3_2 = { width: 600, height: 400 };
+const REPORT_COVER = { width: 800, height: 1000 };
+
+export const homepageCuration: HomepageCuration = {
+  // LEAD STORY
+  leadStory: {
+    id: 'lead-1',
+    title: 'The New Economics of AI Infrastructure',
+    dek: 'How the race to build AI compute is reshaping global capital flows and creating unexpected winners.',
+    href: '/article/new-economics-ai-infrastructure',
+    vertical: 'ai',
+    format: 'deep-dive',
+    heroImage: {
+      src: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1920&h=1080&fit=crop',
+      alt: 'Data center with rows of servers illuminated by blue lights',
+      ...HERO_16_9,
+    },
+    author: { name: 'Sarah Chen', href: '/contributors/sarah-chen' },
+    publishedAt: '2024-01-15',
+    readingTime: '12 min',
+  },
+
+  // THE WEEK (3-5 posts)
+  theWeek: [
+    {
+      id: 'week-1',
+      title: 'OpenAI Restructures: What It Means for the Industry',
+      dek: 'The company shift to a capped-profit model signals a new phase.',
+      href: '/article/openai-restructures',
+      vertical: 'ai',
+      format: 'news',
+      heroImage: {
+        src: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop',
+        alt: 'Abstract AI visualization',
+        ...CARD_3_2,
+      },
+      author: { name: 'Marcus Wei', href: '/contributors/marcus-wei' },
+      publishedAt: '2024-01-14',
+    },
+    {
+      id: 'week-2',
+      title: 'Creator Burnout Is Real - Here Is What Top Creators Are Doing',
+      dek: 'Sustainable content strategies from those who have figured it out.',
+      href: '/article/creator-burnout-solutions',
+      vertical: 'creator-economy',
+      format: 'guide',
+      heroImage: {
+        src: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop',
+        alt: 'Content creator at desk with camera equipment',
+        ...CARD_3_2,
+      },
+      author: { name: 'Jamie Torres', href: '/contributors/jamie-torres' },
+      publishedAt: '2024-01-13',
+    },
+    {
+      id: 'week-3',
+      title: 'The Quiet Rise of Fractional Executives',
+      dek: 'Why startups are hiring part-time C-suite leaders.',
+      href: '/article/fractional-executives-rise',
+      vertical: 'business',
+      format: 'news',
+      heroImage: {
+        src: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&h=400&fit=crop',
+        alt: 'Business professionals in a modern office',
+        ...CARD_3_2,
+      },
+      author: { name: 'Elena Rodriguez', href: '/contributors/elena-rodriguez' },
+      publishedAt: '2024-01-12',
+    },
+    {
+      id: 'week-4',
+      title: 'Apple Vision Pro: First Week Observations',
+      dek: 'Early insights from developers and power users.',
+      href: '/article/vision-pro-first-week',
+      vertical: 'technology',
+      format: 'news',
+      heroImage: {
+        src: 'https://images.unsplash.com/photo-1617802690992-15d93263d3a9?w=600&h=400&fit=crop',
+        alt: 'VR headset on display',
+        ...CARD_3_2,
+      },
+      author: { name: 'David Park', href: '/contributors/david-park' },
+      publishedAt: '2024-01-11',
+    },
+  ],
+
+  // THE INDEX (3-5 posts)
+  theIndex: [
+    {
+      id: 'index-1',
+      title: 'The Complete Guide to AI Model Selection',
+      dek: 'How to choose the right LLM for your use case.',
+      href: '/article/ai-model-selection-guide',
+      vertical: 'ai',
+      format: 'guide',
+      heroImage: {
+        src: 'https://images.unsplash.com/photo-1555255707-c07966088b7b?w=600&h=400&fit=crop',
+        alt: 'Neural network diagram',
+        ...CARD_3_2,
+      },
+      author: { name: 'Sarah Chen', href: '/contributors/sarah-chen' },
+      publishedAt: '2024-01-01',
+    },
+    {
+      id: 'index-2',
+      title: 'Building a Content Empire: The Framework',
+      dek: 'Proven systems for scaling your creator business.',
+      href: '/article/content-empire-framework',
+      vertical: 'creator-economy',
+      format: 'guide',
+      heroImage: {
+        src: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&h=400&fit=crop',
+        alt: 'Planning board with content strategy',
+        ...CARD_3_2,
+      },
+      author: { name: 'Jamie Torres', href: '/contributors/jamie-torres' },
+      publishedAt: '2023-12-15',
+    },
+    {
+      id: 'index-3',
+      title: 'Unit Economics That Actually Work',
+      dek: 'The metrics that matter for sustainable growth.',
+      href: '/article/unit-economics-guide',
+      vertical: 'business',
+      format: 'guide',
+      heroImage: {
+        src: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop',
+        alt: 'Dashboard with business metrics',
+        ...CARD_3_2,
+      },
+      author: { name: 'Elena Rodriguez', href: '/contributors/elena-rodriguez' },
+      publishedAt: '2023-12-01',
+    },
+  ],
+
+  // THE EDIT (6-8 curated stories)
+  theEdit: [
+    {
+      id: 'edit-1',
+      title: 'When AI Agents Negotiate With Each Other',
+      dek: 'The emerging field of autonomous agent economics.',
+      href: '/article/ai-agents-negotiate',
+      vertical: 'ai',
+      format: 'deep-dive',
+      heroImage: {
+        src: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&h=600&fit=crop',
+        alt: 'Abstract representation of AI communication',
+        ...CARD_4_3,
+      },
+      author: { name: 'Sarah Chen', href: '/contributors/sarah-chen' },
+      publishedAt: '2024-01-14',
+      readingTime: '8 min',
+    },
+    {
+      id: 'edit-2',
+      title: 'The Newsletter Operator Playbook',
+      dek: 'From zero to 100k subscribers.',
+      href: '/article/newsletter-playbook',
+      vertical: 'creator-economy',
+      format: 'guide',
+      heroImage: {
+        src: 'https://images.unsplash.com/photo-1596526131083-e8c633c948d2?w=800&h=600&fit=crop',
+        alt: 'Email inbox on laptop screen',
+        ...CARD_4_3,
+      },
+      author: { name: 'Jamie Torres', href: '/contributors/jamie-torres' },
+      publishedAt: '2024-01-13',
+      readingTime: '10 min',
+    },
+    {
+      id: 'edit-3',
+      title: 'Why Your Pricing Strategy Is Wrong',
+      dek: 'Value-based pricing for tech products.',
+      href: '/article/pricing-strategy-wrong',
+      vertical: 'business',
+      format: 'opinion',
+      heroImage: {
+        src: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=600&fit=crop',
+        alt: 'Calculator and financial documents',
+        ...CARD_4_3,
+      },
+      author: { name: 'Elena Rodriguez', href: '/contributors/elena-rodriguez' },
+      publishedAt: '2024-01-12',
+      readingTime: '6 min',
+    },
+    {
+      id: 'edit-4',
+      title: 'The Remote Work Stack That Actually Works',
+      dek: 'Tools and rituals from distributed teams.',
+      href: '/article/remote-work-stack',
+      vertical: 'culture',
+      format: 'index',
+      heroImage: {
+        src: 'https://images.unsplash.com/photo-1587560699334-cc4ff634909a?w=800&h=600&fit=crop',
+        alt: 'Home office setup with multiple screens',
+        ...CARD_4_3,
+      },
+      author: { name: 'David Park', href: '/contributors/david-park' },
+      publishedAt: '2024-01-11',
+      readingTime: '7 min',
+    },
+    {
+      id: 'edit-5',
+      title: 'Prompt Engineering Is Just the Beginning',
+      dek: 'What comes after the prompt.',
+      href: '/article/beyond-prompt-engineering',
+      vertical: 'ai',
+      format: 'opinion',
+      heroImage: {
+        src: 'https://images.unsplash.com/photo-1655720828018-edd2daec9349?w=800&h=600&fit=crop',
+        alt: 'Code on screen with AI interface',
+        ...CARD_4_3,
+      },
+      author: { name: 'Marcus Wei', href: '/contributors/marcus-wei' },
+      publishedAt: '2024-01-10',
+      readingTime: '5 min',
+    },
+    {
+      id: 'edit-6',
+      title: 'The Podcast Monetization Landscape',
+      dek: 'Beyond ads: new revenue models for audio creators.',
+      href: '/article/podcast-monetization-landscape',
+      vertical: 'creator-economy',
+      format: 'deep-dive',
+      heroImage: {
+        src: 'https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=800&h=600&fit=crop',
+        alt: 'Microphone in podcast studio',
+        ...CARD_4_3,
+      },
+      author: { name: 'Jamie Torres', href: '/contributors/jamie-torres' },
+      publishedAt: '2024-01-09',
+      readingTime: '9 min',
+    },
+  ],
+
+  // VERTICAL SHELVES
+  shelves: {
+    ai: {
+      slug: 'artificial-intelligence',
+      label: 'Artificial Intelligence',
+      description: 'Systems, tools, and the business of AI',
+      sublabels: ['Models', 'Applications', 'Infrastructure'],
+      posts: [
+        {
+          id: 'ai-1',
+          title: 'Fine-Tuning vs RAG: The Decision Framework',
+          dek: 'When to customize your model vs. augment with retrieval.',
+          href: '/article/fine-tuning-vs-rag',
+          vertical: 'ai',
+          format: 'guide',
+          heroImage: {
+            src: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&h=600&fit=crop',
+            alt: 'Matrix-style code visualization',
+            ...CARD_4_3,
+          },
+          author: { name: 'Sarah Chen', href: '/contributors/sarah-chen' },
+          publishedAt: '2024-01-10',
+        },
+        {
+          id: 'ai-2',
+          title: 'The Real Cost of Running LLMs in Production',
+          dek: 'GPU hours, API costs, and optimization strategies.',
+          href: '/article/llm-production-costs',
+          vertical: 'ai',
+          format: 'deep-dive',
+          heroImage: {
+            src: 'https://images.unsplash.com/photo-1639322537228-f710d846310a?w=800&h=600&fit=crop',
+            alt: 'Server room with cooling systems',
+            ...CARD_4_3,
+          },
+          author: { name: 'Marcus Wei', href: '/contributors/marcus-wei' },
+          publishedAt: '2024-01-08',
+        },
+        {
+          id: 'ai-3',
+          title: 'Multimodal AI: What Product Teams Need to Know',
+          dek: 'Building experiences that combine text, image, and audio.',
+          href: '/article/multimodal-ai-products',
+          vertical: 'ai',
+          format: 'guide',
+          heroImage: {
+            src: 'https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?w=800&h=600&fit=crop',
+            alt: 'Mixed media interface design',
+            ...CARD_4_3,
+          },
+          author: { name: 'Sarah Chen', href: '/contributors/sarah-chen' },
+          publishedAt: '2024-01-06',
+        },
+        {
+          id: 'ai-4',
+          title: 'AI Safety: A Practical Framework for Teams',
+          dek: 'Implementing guardrails without slowing down.',
+          href: '/article/ai-safety-practical-framework',
+          vertical: 'ai',
+          format: 'guide',
+          heroImage: {
+            src: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&h=600&fit=crop',
+            alt: 'Security lock on digital interface',
+            ...CARD_4_3,
+          },
+          author: { name: 'Marcus Wei', href: '/contributors/marcus-wei' },
+          publishedAt: '2024-01-04',
+        },
+      ],
+    },
+    creator: {
+      slug: 'creator-economy',
+      label: 'Creator Economy',
+      description: 'Building and monetizing audiences',
+      sublabels: ['Monetization', 'Audience', 'Platforms'],
+      posts: [
+        {
+          id: 'creator-1',
+          title: 'The Membership Model Playbook',
+          dek: 'Recurring revenue strategies that work.',
+          href: '/article/membership-model-playbook',
+          vertical: 'creator-economy',
+          format: 'guide',
+          heroImage: {
+            src: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop',
+            alt: 'Community gathering at event',
+            ...CARD_4_3,
+          },
+          author: { name: 'Jamie Torres', href: '/contributors/jamie-torres' },
+          publishedAt: '2024-01-09',
+        },
+        {
+          id: 'creator-2',
+          title: 'YouTube Algorithm Decoded: 2024 Edition',
+          dek: 'What actually drives recommendations now.',
+          href: '/article/youtube-algorithm-2024',
+          vertical: 'creator-economy',
+          format: 'deep-dive',
+          heroImage: {
+            src: 'https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=800&h=600&fit=crop',
+            alt: 'YouTube play button on screen',
+            ...CARD_4_3,
+          },
+          author: { name: 'Jamie Torres', href: '/contributors/jamie-torres' },
+          publishedAt: '2024-01-07',
+        },
+        {
+          id: 'creator-3',
+          title: 'Sponsorship Rate Cards: The Complete Guide',
+          dek: 'How to price your influence.',
+          href: '/article/sponsorship-rate-cards',
+          vertical: 'creator-economy',
+          format: 'guide',
+          heroImage: {
+            src: 'https://images.unsplash.com/photo-1553835973-dec43bfddbeb?w=800&h=600&fit=crop',
+            alt: 'Brand collaboration meeting',
+            ...CARD_4_3,
+          },
+          author: { name: 'Jamie Torres', href: '/contributors/jamie-torres' },
+          publishedAt: '2024-01-05',
+        },
+      ],
+    },
+    business: {
+      slug: 'business',
+      label: 'Business',
+      description: 'Strategy, operations, and growth',
+      sublabels: ['Strategy', 'Operations', 'Finance'],
+      posts: [
+        {
+          id: 'biz-1',
+          title: 'PLG vs Sales-Led: Choosing Your GTM',
+          dek: 'The hybrid model emerging as the winner.',
+          href: '/article/plg-vs-sales-led',
+          vertical: 'business',
+          format: 'deep-dive',
+          heroImage: {
+            src: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop',
+            alt: 'Growth chart on dashboard',
+            ...CARD_4_3,
+          },
+          author: { name: 'Elena Rodriguez', href: '/contributors/elena-rodriguez' },
+          publishedAt: '2024-01-08',
+        },
+        {
+          id: 'biz-2',
+          title: 'The Modern CFO Tech Stack',
+          dek: 'Tools that are changing financial operations.',
+          href: '/article/modern-cfo-stack',
+          vertical: 'business',
+          format: 'index',
+          heroImage: {
+            src: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=600&fit=crop',
+            alt: 'Financial software interface',
+            ...CARD_4_3,
+          },
+          author: { name: 'Elena Rodriguez', href: '/contributors/elena-rodriguez' },
+          publishedAt: '2024-01-06',
+        },
+        {
+          id: 'biz-3',
+          title: 'Building for Bootstrap vs VC',
+          dek: 'How funding shapes product decisions.',
+          href: '/article/bootstrap-vs-vc',
+          vertical: 'business',
+          format: 'opinion',
+          heroImage: {
+            src: 'https://images.unsplash.com/photo-1559526324-593bc073d938?w=800&h=600&fit=crop',
+            alt: 'Startup team brainstorming',
+            ...CARD_4_3,
+          },
+          author: { name: 'Elena Rodriguez', href: '/contributors/elena-rodriguez' },
+          publishedAt: '2024-01-04',
+        },
+        {
+          id: 'biz-4',
+          title: 'Customer Success: The Retention Multiplier',
+          dek: 'Why CS is your best growth lever.',
+          href: '/article/customer-success-retention',
+          vertical: 'business',
+          format: 'guide',
+          heroImage: {
+            src: 'https://images.unsplash.com/photo-1552581234-26160f608093?w=800&h=600&fit=crop',
+            alt: 'Customer support team',
+            ...CARD_4_3,
+          },
+          author: { name: 'Elena Rodriguez', href: '/contributors/elena-rodriguez' },
+          publishedAt: '2024-01-02',
+        },
+      ],
+    },
+    living: {
+      slug: 'living',
+      label: 'Living',
+      description: 'Life, culture, and the human side of tech',
+      sublabels: ['Wellness', 'Culture', 'Places'],
+      posts: [
+        {
+          id: 'living-1',
+          title: 'The Async-First Life',
+          dek: 'Designing your days around deep work.',
+          href: '/article/async-first-life',
+          vertical: 'culture',
+          format: 'guide',
+          heroImage: {
+            src: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop',
+            alt: 'Minimalist workspace',
+            ...CARD_4_3,
+          },
+          author: { name: 'David Park', href: '/contributors/david-park' },
+          publishedAt: '2024-01-09',
+        },
+        {
+          id: 'living-2',
+          title: 'Digital Sabbaticals: A How-To',
+          dek: 'Planned disconnection for sustainable performance.',
+          href: '/article/digital-sabbaticals',
+          vertical: 'culture',
+          format: 'guide',
+          heroImage: {
+            src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop',
+            alt: 'Mountain landscape',
+            ...CARD_4_3,
+          },
+          author: { name: 'David Park', href: '/contributors/david-park' },
+          publishedAt: '2024-01-07',
+        },
+        {
+          id: 'living-3',
+          title: 'The New Tech Hubs: Beyond SF',
+          dek: 'Where builders are moving in 2024.',
+          href: '/article/new-tech-hubs',
+          vertical: 'culture',
+          format: 'deep-dive',
+          heroImage: {
+            src: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&h=600&fit=crop',
+            alt: 'City skyline at sunset',
+            ...CARD_4_3,
+          },
+          author: { name: 'David Park', href: '/contributors/david-park' },
+          publishedAt: '2024-01-05',
+        },
+      ],
+    },
+  },
+
+  // INDEX STRIP (5-7 evergreen magnets)
+  indexStrip: [
+    {
+      id: 'magnet-1',
+      title: 'The Complete AI Glossary',
+      href: '/article/ai-glossary',
+      vertical: 'ai',
+      format: 'index',
+    },
+    {
+      id: 'magnet-2',
+      title: 'Creator Monetization Guide',
+      href: '/article/creator-monetization-guide',
+      vertical: 'creator-economy',
+      format: 'guide',
+    },
+    {
+      id: 'magnet-3',
+      title: 'Startup Metrics Dashboard',
+      href: '/article/startup-metrics-dashboard',
+      vertical: 'business',
+      format: 'index',
+    },
+    {
+      id: 'magnet-4',
+      title: 'Remote Work Toolkit',
+      href: '/article/remote-work-toolkit',
+      vertical: 'culture',
+      format: 'index',
+    },
+    {
+      id: 'magnet-5',
+      title: 'AI Tools Directory',
+      href: '/article/ai-tools-directory',
+      vertical: 'ai',
+      format: 'index',
+    },
+    {
+      id: 'magnet-6',
+      title: 'Newsletter Tech Stack',
+      href: '/article/newsletter-tech-stack',
+      vertical: 'creator-economy',
+      format: 'index',
+    },
+  ],
+
+  // REPORTS
+  reports: {
+    latest: {
+      id: 'report-1',
+      title: 'The State of AI Infrastructure 2024',
+      description: 'A comprehensive analysis of the AI compute landscape, including GPU availability, cloud costs, and emerging infrastructure patterns.',
+      href: '/reports/state-of-ai-infrastructure-2024',
+      coverImage: {
+        src: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=1000&fit=crop',
+        alt: 'Data center visualization',
+        ...REPORT_COVER,
+      },
+      author: { name: 'Sarah Chen', href: '/contributors/sarah-chen' },
+      publishedAt: '2024-01-10',
+    },
+    archive: [
+      {
+        id: 'report-2',
+        title: 'Creator Economy Market Report 2023',
+        href: '/reports/creator-economy-2023',
+        publishedAt: '2023-12-01',
+      },
+      {
+        id: 'report-3',
+        title: 'B2B SaaS Pricing Strategies',
+        href: '/reports/b2b-saas-pricing',
+        publishedAt: '2023-10-15',
+      },
+      {
+        id: 'report-4',
+        title: 'The Future of Work: 2030 Outlook',
+        href: '/reports/future-of-work-2030',
+        publishedAt: '2023-08-01',
+      },
+    ],
+  },
+};
+
+export default homepageCuration;

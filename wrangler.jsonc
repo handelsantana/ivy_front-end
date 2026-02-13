@@ -1,0 +1,19 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "ivy-edition-magazine-fe",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2026-02-12",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  }
+  // Optional for persistent publish storage:
+  // "kv_namespaces": [
+  //   {
+  //     "binding": "CMS_DATA",
+  //     "id": "<KV_NAMESPACE_ID>",
+  //     "preview_id": "<KV_PREVIEW_NAMESPACE_ID>"
+  //   }
+  // ]
+}

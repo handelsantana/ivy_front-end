@@ -1,0 +1,134 @@
+/* IVY EDITION Global Styles */
+/* Import order: tokens → typography → globals */
+
+/* ========================================
+   GOOGLE FONTS
+   Playfair Display: 400, 600, 700 (headlines)
+   Inter: 400, 500, 600 (body/UI)
+   ======================================== */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600&display=swap');
+
+/* Import design tokens and typography */
+@import './tokens.css';
+@import './typography.css';
+
+/* ========================================
+   BASE RESETS & GLOBAL STYLES
+   ======================================== */
+
+/* Apply border-box globally */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margins */
+* {
+  margin: 0;
+}
+
+/* Set core body defaults */
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+  color: hsl(var(--ivy-foreground));
+  background-color: hsl(var(--ivy-background));
+}
+
+/* ========================================
+   TYPOGRAPHY DEFAULTS
+   ======================================== */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-headline);
+  color: hsl(var(--ivy-foreground));
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+  max-width: var(--content-width-prose);
+}
+
+/* ========================================
+   LINK STYLES
+   ======================================== */
+
+a {
+  color: hsl(var(--ivy-link));
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+  transition: color 150ms ease, text-decoration-color 150ms ease;
+}
+
+a:hover {
+  color: hsl(var(--ivy-link-hover));
+}
+
+a:focus-visible {
+  outline: 2px solid hsl(var(--ivy-focus-ring));
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* ========================================
+   SELECTION STYLES
+   ======================================== */
+
+::selection {
+  background-color: hsl(var(--ivy-foreground));
+  color: hsl(var(--ivy-background));
+}
+
+/* ========================================
+   FOCUS STYLES (Accessibility)
+   ======================================== */
+
+:focus-visible {
+  outline: 2px solid hsl(var(--ivy-focus-ring));
+  outline-offset: 2px;
+}
+
+/* Remove outline for mouse users */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ========================================
+   IMAGE DEFAULTS
+   ======================================== */
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ========================================
+   UTILITY: CONTENT WIDTH CONSTRAINT
+   ======================================== */
+
+.ivy-prose {
+  max-width: var(--content-width-prose);
+}
+
+.ivy-max-width {
+  max-width: var(--content-width-max);
+}
+
+/* ========================================
+   UTILITY: SPACING
+   ======================================== */
+
+.ivy-section-sm { padding-block: var(--space-5); }
+.ivy-section-md { padding-block: var(--space-6); }
+.ivy-section-lg { padding-block: var(--space-7); }
+.ivy-section-xl { padding-block: var(--space-8); }
